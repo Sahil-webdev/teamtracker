@@ -1,0 +1,66 @@
+╔════════════════════════════════════════════════════════════╗
+║                                                            ║
+║     LOCATION TRACKER - QUICK START INSTRUCTIONS            ║
+║                                                            ║
+╚════════════════════════════════════════════════════════════╝
+
+█████████████████████████████████████████████████████████████
+  USER PANEL (for employees)
+█████████████████████████████████████████████████████████████
+
+    Double-Click: run-user-panel.bat
+
+    What it does:
+    • Opens Backend + Metro Bundler windows
+    • Launches USER LOGIN screen on emulator
+    • Employees can signup and track location
+
+█████████████████████████████████████████████████████████████
+  MASTER PANEL (for admin/manager)
+█████████████████████████████████████████████████████████████
+
+    Double-Click: run-master-panel.bat
+
+    What it does:
+    • Opens Backend + Metro Bundler windows
+    • Launches MASTER LOGIN screen on emulator
+    • Admin can approve users and view locations
+
+    Login: master@office.com / master123
+
+═══════════════════════════════════════════════════════════
+
+⚠️  IMPORTANT RULES:
+
+1. Use ONLY ONE script (user OR master)
+   Don't use old start-backend.bat or start-app.bat
+
+2. Wait 15 seconds after running script
+   Metro Bundler needs time to build the app
+
+3. Keep the opened windows running
+   Backend and Metro windows must stay open
+
+4. If white screen appears:
+   • Wait 10 seconds
+   • OR double-tap "R" on emulator to reload
+
+═══════════════════════════════════════════════════════════
+
+📋 WORKFLOW EXAMPLE:
+
+1. Run Master Panel → Login → Go to Dashboard
+
+2. Run User Panel (separately) → Signup as test user
+
+3. Run Master Panel again → See pending request → 
+   See OTP → Click Approve
+
+4. Run User Panel again → Login with Email + OTP → 
+   Start tracking location
+
+5. Check Master Panel → "All Users" to see tracking user
+
+═══════════════════════════════════════════════════════════
+
+Need help? Open: README-SHORTCUTS.md

@@ -1,0 +1,3 @@
+Mobile APK backend URL: http://192.168.31.116:5000/api
+Requirement: phone and PC must be on same Wi-Fi network.
+Start backend from: c:\RNProjects\LocationTracker\backend\app.py
