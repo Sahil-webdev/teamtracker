@@ -1,0 +1,15 @@
+[Unit]
+Description=LocationTracker Flask Backend
+After=network.target
+
+[Service]
+User=root
+WorkingDirectory=/var/www/locationtracker/backend
+EnvironmentFile=/var/www/locationtracker/backend/.env
+Environment=PATH=/var/www/locationtracker/backend/.venv/bin
+ExecStart=/var/www/locationtracker/backend/.venv/bin/gunicorn -w 3 -b 127.0.0.1:5000 app:app
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target

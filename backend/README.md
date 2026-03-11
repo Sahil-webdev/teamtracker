@@ -1,6 +1,6 @@
 # Location Tracker Backend
 
-## Setup Instructions
+## Local Setup
 
 1. Install Python dependencies:
 ```bash
@@ -12,7 +12,22 @@ pip install -r requirements.txt
 python app.py
 ```
 
-The server will run on `http://localhost:5000`
+The server will run on `http://localhost:5000`.
+
+## Production on VPS (Fast Path)
+
+Deployment templates are in `deploy/vps/`.
+
+Run on VPS:
+```bash
+sudo bash /var/www/locationtracker/deploy/vps/setup-vps.sh https://github.com/Sahil-webdev/teamtracker.git api.yourdomain.com
+```
+
+Then update app APK build with production API:
+```bash
+cd c:\RNProjects\LocationTracker\android
+.\gradlew.bat :app:assembleUserRelease :app:assembleMasterRelease -PAPI_BASE_URL=https://api.yourdomain.com/api
+```
 
 ## Default Master Credentials
 - Email: `master@office.com`

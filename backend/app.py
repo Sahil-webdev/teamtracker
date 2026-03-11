@@ -9,11 +9,14 @@ import os
 import random
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, origins=os.environ.get('CORS_ORIGINS', '*').split(','))
 
 # Configuration
-app.config['SECRET_KEY'] = 'your-secret-key-change-in-production'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///location_tracker.db'
+app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', 'dev-secret-key-change-me')
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get(
+    'DATABASE_URL',
+    'sqlite:///location_tracker.db'
+)
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
@@ -445,4 +448,8 @@ def test():
     return jsonify({'message': 'Backend is running!'}), 200
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=5000)
+    app.run(
+        debug=os.environ.get('FLASK_DEBUG', '0') == '1',
+        host=os.environ.get('HOST', '0.0.0.0'),
+        port=int(os.environ.get('PORT', '5000'))
+    )
