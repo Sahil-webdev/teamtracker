@@ -38,3 +38,37 @@ r - reload app
 
  BUNDLE  ./index.js 
 
+ BUNDLE  ./index.js 
+
+ LOG  Running "LocationTracker" with {"initialProps":{},"rootTag":11}
+ LOG  Running "LocationTracker" with {"initialProps":{},"rootTag":41}
+ BUNDLE  ./index.js 
+
+ LOG  Running "LocationTracker" with {"initialProps":{},"rootTag":11}
+error: Error: Got unexpected undefined
+    at nullthrows (c:\RNProjects\LocationTracker\node_modules\nullthrows\nullthrows.js:7:15)
+    at Graph._recursivelyCommitModule (c:\RNProjects\LocationTracker\node_modules\metro\src\DeltaBundler\Graph.js:197:27)
+    at Graph.traverseDependencies (c:\RNProjects\LocationTracker\node_modules\metro\src\DeltaBundler\Graph.js:99:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async DeltaCalculator._getChangedDependencies (c:\RNProjects\LocationTracker\node_modules\metro\src\DeltaBundler\DeltaCalculator.js:187:42)
+    at async DeltaCalculator.getDelta (c:\RNProjects\LocationTracker\node_modules\metro\src\DeltaBundler\DeltaCalculator.js:68:16)
+    at async DeltaBundler.getDelta (c:\RNProjects\LocationTracker\node_modules\metro\src\DeltaBundler.js:46:12)
+    at async IncrementalBundler.updateGraph (c:\RNProjects\LocationTracker\node_modules\metro\src\IncrementalBundler.js:207:19)
+    at async HmrServer._prepareMessage (c:\RNProjects\LocationTracker\node_modules\metro\src\HmrServer.js:240:35)
+    at async HmrServer._handleFileChange (c:\RNProjects\LocationTracker\node_modules\metro\src\HmrServer.js:210:21)
+ ERROR  [Error: InternalError Metro has encountered an error: Got unexpected undefined: c:\RNProjects\LocationTracker\node_modules\nullthrows\nullthrows.js (7:15)
+
+[0m [90m  5 |[39m     [36mreturn[39m x[33m;[39m
+ [90m  6 |[39m   }
+[31m[1m>[22m[39m[90m  7 |[39m   [36mvar[39m error [33m=[39m [36mnew[39m [33mError[39m(message [33m!==[39m undefined [33m?[39m message [33m:[39m [32m'Got unexpected '[39m [33m+[39m x)[33m;[39m
+ [90m    |[39m               [31m[1m^[22m[39m
+ [90m  8 |[39m   error[33m.[39mframesToPop [33m=[39m [35m1[39m[33m;[39m [90m// Skip nullthrows's own stack frame.[39m
+ [90m  9 |[39m   [36mthrow[39m error[33m;[39m
+ [90m 10 |[39m }[0m]
+ ERROR  [Error: [Refresh] Expected to find the updated module.]
+ BUNDLE  ./index.js 
+
+ LOG  Running "LocationTracker" with {"initialProps":{},"rootTag":11}
+ BUNDLE  ./index.js 
+
+ LOG  Running "LocationTracker" with {"initialProps":{},"rootTag":11}
